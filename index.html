@@ -7,7 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="css/navstyle.css" />
 	<link rel="stylesheet" type="text/css" href="css/bodystyle.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsivestyle.css" />
+	<!--[IF !IE]><!-->
+	<link rel="stylesheet" type="text/css" href="css/notiestyle.css" />
+	<!--<![endif]-->
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 <body>
 	<div class="navbar">
@@ -26,9 +30,16 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="selector">
+		<!--<div class="selector">
 			<div class="option car"></div>
 			<div class="option bike"></div>
+		</div>-->
+		<div class="input-container">
+			<form action="">
+				<input type="text" name='start' placeholder="Starting location" />
+				<input type="text" name='end' placeholder="Destination" />
+				<input type="checkbox"
+			</form>
 		</div>
 	</div>
 </body>

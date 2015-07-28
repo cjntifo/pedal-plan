@@ -2,6 +2,7 @@
 	width: 700px;
 	margin: 0 auto;
 	padding: 10px;
+	text-align: center;
 }
 .selector .car {
 	background: url('../images/car.png');
@@ -29,4 +30,15 @@
 	position: relative;
 	padding: 5px;
 	border: solid 1px;
+}
+input[type=text] {
+	background: white;
+	padding: 5px 10px;
+	border: solid 1px #aaa;
+	font-size: 25px;
+	border-radius: 5px;
+	width: 200px;
+}
+.input-container {
+	margin-top: 15px;
 }
