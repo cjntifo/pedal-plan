@@ -2,34 +2,9 @@
 	width: 700px;
 	margin: 0 auto;
 	padding: 10px;
+}
+.locations {
 	text-align: center;
-}
-.selector .car {
-	background: url('../images/car.png');
-	padding-right: 5%;
-	border-right: solid 1px;
-	float: left;
-}
-.selector .bike {
-	background: url('../images/bike.png');
-	padding-left: 5%;
-	float: right;
-	background-position: right;
-	border-left: solid 1px;
-}
-.selector .option {
-	width: 50%;
-	height: 100%;
-	background-size: 90% 100%;
-	background-repeat: no-repeat;
-}
-.selector {
-	width: 80%;
-	height: 80px;
-	margin: 0 auto;
-	position: relative;
-	padding: 5px;
-	border: solid 1px;
 }
 input[type=text] {
 	background: white;
@@ -38,6 +13,7 @@ input[type=text] {
 	font-size: 25px;
 	border-radius: 5px;
 	width: 200px;
+	margin-top: 10px;
 }
 .input-container {
 	margin-top: 15px;

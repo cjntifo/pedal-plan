@@ -14,3 +14,11 @@
 .clear {
 	clear: both;
 }
+.title {
+	font-size: 35px;
+	color: #333;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+}
