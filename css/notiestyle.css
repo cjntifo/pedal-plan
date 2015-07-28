@@ -23,7 +23,7 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked + label:before {
 	content: '✔';
-	padding: 2px;
+	padding: 1px 2px;
 	color: #000;
 }
 form p {
