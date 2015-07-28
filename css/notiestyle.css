@@ -21,17 +21,19 @@ input[type=checkbox] + label {
 input[type=checkbox] {
 	display: none;
 }
-input[type=checkbox]:checked + label:after {
-	content: '';
-	background: #333;
+/*input[type=checkbox]:checked + label:after {
+	content: '✔';
 	display: block;
-	width: 18px;
-	height: 18px;
 	position: absolute;
 	top: 50%;
-	left: 2px;
-	margin-top: -8px;
+	left: 6px;
+	margin-top: -4px;
 	border-radius: 4px;
+}*/
+input[type=checkbox]:checked + label:before {
+	content: '✔';
+	padding: 2px;
+	color: #000;
 }
 form p {
 	margin-top: 20px;
