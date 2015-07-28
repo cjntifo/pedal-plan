@@ -21,15 +21,6 @@ input[type=checkbox] + label {
 input[type=checkbox] {
 	display: none;
 }
-/*input[type=checkbox]:checked + label:after {
-	content: '✔';
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 6px;
-	margin-top: -4px;
-	border-radius: 4px;
-}*/
 input[type=checkbox]:checked + label:before {
 	content: '✔';
 	padding: 2px;
