@@ -14,7 +14,4 @@ window.onload = function () {
 			navItems.className = "toggled";
 		}
 	}
-	if (ie < 10) {
-		
-	}
 }
