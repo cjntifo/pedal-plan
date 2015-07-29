@@ -50,6 +50,9 @@ if ($autofill) {
 		</div>
 	</div>
 	<div class="container">
+		<div class="desc">
+			Fill out the form below to find out the best route for you and your bike to take
+		</div>
 		<div class="input-container">
 			<form action="checker.php" method="get">
 				<div class='locations'>
@@ -81,7 +84,7 @@ if ($autofill) {
 					</div>
 				</div>
 				<div class="button-submit">
-					<button type="submit">Confirm</button>
+					<button type="submit">Get Route</button>
 				</div>
 			</form>
 		</div>
