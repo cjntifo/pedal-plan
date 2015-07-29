@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/navstyle.css" />
 	<link rel="stylesheet" type="text/css" href="css/bodystyle.css" />
+	<link rel="stylesheet" type="text/css" href="css/resultsstyle.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsivestyle.css" />
 	<title>Results</title>
 </head>
@@ -43,7 +44,19 @@
 				Directions
 			</div>
 			<div class="instructions">
-				
+				<ul>
+				<?php
+					$array = array("Turn left", "Go straight on", "Turn right", "Go round the roundabout", "Get a satnav");
+					foreach ($array as $key => $value) {
+						$i = $key + 1;
+						if ($i % 2) {
+							echo("<li class='odd'><b>$i</b> $value</li>");
+						} else {
+							echo("<li class='even'><b>$i</b> $value</li>");
+						}
+					}
+				?>
+				</ul>
 			</div>
 		</div>
 	</div>

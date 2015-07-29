@@ -1,0 +1,14 @@
+.odd {
+	background: #eee;
+}
+.even {
+	background: #aaa;
+}
+.odd, .even {
+	color: #333;
+	list-style: none;
+	padding: 10px;
+}
+.odd b, .even b {
+	margin-right: 15px;
+}
