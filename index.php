@@ -28,7 +28,6 @@ if ($autofill) {
 	<link rel="stylesheet" type="text/css" href="css/notiestyle.css" />
 	<!--<![endif]-->
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<!--[if IE]>
 	<script type="text/javascript" src="js/iescript.js"></script>
 	<![endif]-->
@@ -43,8 +42,8 @@ if ($autofill) {
 			</div>
 			<div class="logo">LOGO</div>
 			<ul id="nav-items">
-				<a href="index.html"><li>Home</li></a>
-				<a href="index.html"><li>About</li></a>
+				<a href="index.php"><li>Home</li></a>
+				<a href="about.php"><li>About</li></a>
 			</ul>
 			<br class="clear" />
 		</div>
