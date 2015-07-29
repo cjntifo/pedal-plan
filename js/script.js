@@ -22,10 +22,10 @@ window.onload = function () {
 			navItems.className = "toggled";
 		}
 	}
-	if (loadErrorCheckerScript) {
+	if (typeof loadErrorCheckerScript == 'function') {
 		loadErrorCheckerScript();
 	}
-	if (loadIEScript) {
+	if (typeof loadIEScript == 'function') {
 		loadIEScript();
 	}
 }

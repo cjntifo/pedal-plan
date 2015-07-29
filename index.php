@@ -53,6 +53,7 @@ if ($autofill) {
 		<div class="desc">
 			Fill out the form below to find out the best route for you and your bike to take
 		</div>
+		<div id="error-msg"></div>
 		<div class="input-container">
 			<form action="results.php" method="get" id='get-route'>
 				<div class='locations'>

@@ -78,3 +78,10 @@ button[type=submit]:hover {
 	font-size: 18px;
 	padding: 7px 0;
 }
+#error-msg {
+	height: 30px;
+	color: #E60000;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}

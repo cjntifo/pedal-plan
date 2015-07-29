@@ -1,6 +1,8 @@
 function loadErrorCheckerScript() {
 	var getRoute = document.getElementById('get-route'),
-		inputs = document.getElementsByTagName('input');
+		inputs = document.getElementsByTagName('input'),
+		errorDialogue = document.getElementById('error-msg'),
+		timer;
 	getRoute.onsubmit = function () {
 		if(this.className == 'success') {
 			return true;
@@ -35,12 +37,19 @@ function loadErrorCheckerScript() {
 		    		getRoute.submit();
 		    	} else {
 		    		if (result.length == 3) {
-		    			alert('Both locations are invalid');
-		    		} else if (result[1] == '0') {
-		    			alert('Your destination is invalid');
+		    			errorMsg = 'Both locations are invalid';
+		    		} else if (result[1] == '1') {
+		    			errorMsg = 'Your destination is invalid';
 		    		} else {
-		    			alert('Your location is invalid');
+		    			errorMsg = 'Your location is invalid';
 		    		}
+		    		errorDialogue.innerHTML = errorMsg;
+		    		if (timer) {
+		    			timer = clearTimeout(timer);
+		    			timer = setTimeout(function() {errorDialogue.innerHTML = ''; timer = clearTimeout(timer)}, 3000);
+		    		};
+		    		timer = clearTimeout(timer);
+		    		timer = setTimeout(function() {errorDialogue.innerHTML = ''; timer = clearTimeout(timer)}, 3000);
 		    	}
 		    }
 		}
