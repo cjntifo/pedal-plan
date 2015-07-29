@@ -27,10 +27,11 @@ if ($autofill) {
 	<!--[if gt ie 8]><!-->
 	<link rel="stylesheet" type="text/css" href="css/notiestyle.css" />
 	<!--<![endif]-->
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/errorcheckerscript.js"></script>
 	<!--[if IE]>
 	<script type="text/javascript" src="js/iescript.js"></script>
 	<![endif]-->
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<div class="navbar">
@@ -53,7 +54,7 @@ if ($autofill) {
 			Fill out the form below to find out the best route for you and your bike to take
 		</div>
 		<div class="input-container">
-			<form action="checker.php" method="get">
+			<form action="results.php" method="get" id='get-route'>
 				<div class='locations'>
 					<input type="text" name='start' placeholder="From..." <?php if ($autofill) {
 						echo('value="'.$start.'"');

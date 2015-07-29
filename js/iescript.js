@@ -1,4 +1,4 @@
-window.onload = function () {
+function loadIEScript () {
 	var inputs = document.getElementsByTagName('input');
 	for (var i = inputs.length - 1; i >= 0; i--) {
 		inputs[i].value = inputs[i].getAttribute('placeholder');

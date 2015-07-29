@@ -9,7 +9,18 @@
 	$safest = get('safest', 'off');
 	$start = get('start');
 	$end = get('end');
+	$rtn = '';
+
 	if (!$start || !$end) {
-		header("Location: index.php?auto=yes&start=$start&end=$end&congestion=$congestion&safest=$safest");
+		$rtn = 'false';
+		if (!$start) {
+			$rtn .= ' 0';
+		}
+		if (!$end) {
+			$rtn .= ' 1';
+		}
+	} else {
+		$rtn = 'true';
 	}
+	echo $rtn;
 ?>
