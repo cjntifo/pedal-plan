@@ -50,10 +50,12 @@
 		foreach ($route_data->routes as $route) {
 			$instructions = [];
 			$coords = [];
+			$polylines = [];
 	
 			foreach ($route->legs[0]->steps as $step) {
 				$polyline = $step->polyline->points;
 				$coords = array_merge($coords, getOddKeys(decodePolyline($polyline)));
+				array_push($polylines, $polyline);
 		
 				$instruction = strip_tags(str_replace("<div", ". <div", $step->html_instructions), "<b>") . ".";
 				array_push($instructions, $instruction);
@@ -64,7 +66,7 @@
 				array_push($rounded_lng, round($coord[1], 2));
 			}
 		
-			array_push($routes, array("instructions"=>$instructions, "coords"=>$coords));
+			array_push($routes, array("instructions"=>$instructions, "coords"=>$coords, "polylines"=>$polylines, "start"=>[$route->legs[0]->start_location, $route->legs[0]->start_address], "end"=>[$route->legs[0]->end_location, $route->legs[0]->end_address]));
 		}
 	
 		$rounded_lat = array_unique($rounded_lat);

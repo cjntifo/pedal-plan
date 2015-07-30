@@ -19,9 +19,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+	<meta name="viewport" content="width=device-width">
+	
+	<script>
+		var polylines = [<?php 
+				foreach ($routes[0]["polylines"] as $key=>$polyline) {
+					echo "\"$polyline\"";
+					echo ($key + 1 == count($routes[0]["polylines"])) ? "" : ",";
+				}
+			?>],
+			start_address = "<?php echo $routes[0]["start"][1]; ?>",
+			start_coords = [<?php echo $routes[0]["start"][0]->lat; ?>, <?php echo $routes[0]["start"][0]->lng; ?>],
+			end_address = "<?php echo $routes[0]["end"][1]; ?>",
+			end_coords = [<?php echo $routes[0]["end"][0]->lat; ?>, <?php echo $routes[0]["end"][0]->lng; ?>];
+	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
 	<script type='text/javascript' src='js/mapscript.js'></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/navstyle.css" />
 	<link rel="stylesheet" type="text/css" href="css/bodystyle.css" />
