@@ -28,7 +28,7 @@ if ($autofill) {
 	<link rel="stylesheet" type="text/css" href="css/notiestyle.css" />
 	<!--<![endif]-->
 	<script type="text/javascript" src="js/errorcheckerscript.js"></script>
-	<script type="text/javascript" src="js/iescript.js"></script>
+	<script type="text/javascript" src="js/placeholderscript.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
