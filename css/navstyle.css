@@ -1,0 +1,58 @@
+#bars {
+    width: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+}
+.bar {
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    height: 5px;
+    margin-top: 4px;
+    background: #000;
+    border-radius: 2px;
+}
+.nav-container {
+	width: 700px;
+	margin: 0 auto;
+}
+.navbar {
+    border-bottom: solid 1px #ccc;
+    overflow: hidden;
+    padding: 0 13px;
+}
+.logo {
+    float: right;
+}
+.logo:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav-items {
+    float: left;
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.6s ease;
+    -moz-transition: height 0.6s ease;
+    -ms-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+}
+#nav-items li {
+    list-style: none;
+    padding: 20px;
+    height: 50px;
+    padding-left: 0;    
+}
+.navbar a {
+    text-decoration: none;
+    color: #000;
+}
+#nav-items.toggled {
+    height: 100px;
+    margin-bottom: 10px;
+}
