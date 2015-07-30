@@ -2,13 +2,27 @@
 	background: #eee;
 }
 .even {
-	background: #ccc;
+	background: #b7b7b7;
 }
-.odd, .even {
+.instructions li {
 	color: #333;
 	list-style: none;
-	padding: 10px;
+	counter-increment: count;
+	display: table-row;
 }
-.odd b, .even b {
-	margin-right: 15px;
+.instructions ol {
+	list-style-position: inside;
+	counter-reset: count;
+	display: table;
+}
+
+.instructions li:before {
+	padding-right: .3em;
+	content: counter(count) ".  ";
+	text-align: right;
+}
+
+.instructions li:before, .instructions p {
+	display: table-cell;
+	padding: 10px;
 }

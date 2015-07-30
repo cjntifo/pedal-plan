@@ -56,20 +56,16 @@ if ($autofill) {
 		<div class="input-container">
 			<form action="results.php" method="get" id='get-route'>
 				<div class='locations'>
-					<div class='input-holder'>
-						<label for="start" id='start-placeholder'>From...</label>
-						<input type="text" name='start' id='start' placeholder='From...' <?php if ($autofill) {
-							echo('value="'.$start.'"');
-						} ?> />
-					</div>
+					<label for="start" id='start-placeholder'>From...</label>
+					<input type="text" name='start' id='start' placeholder='From...' <?php if ($autofill) {
+						echo('value="'.$start.'"');
+					} ?> />
 					<div class="arrow">&rarr;</div>
 					<div class="arrow-down">&darr;</div>
-					<div class='input-holder'>
-						<label for="end" id='end-placeholder'>To...</label>
-						<input type="text" name='end' id='end' placeholder='To...' <?php if ($autofill) {
-							echo('value="'.$end.'"');
-						} ?> />
-					</div>
+					<label for="end" id='end-placeholder'>To...</label>
+					<input type="text" name='end' id='end' placeholder='To...' <?php if ($autofill) {
+						echo('value="'.$end.'"');
+					} ?> />
 				</div>
 				<div class="checkbox-container">
 					<div class='checkboxes'>
