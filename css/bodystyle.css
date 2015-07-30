@@ -121,3 +121,7 @@ label[for=end].active, label[for=start].active {
 :-ms-input-placeholder {
    color: transparent;
 }
+.input-holder {
+	display: inline-block;
+	position: relative;
+}
