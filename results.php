@@ -37,11 +37,11 @@
 	<script type='text/javascript' src='js/mapscript.js'></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/navstyle.css" />
-	<link rel="stylesheet" type="text/css" href="css/bodystyle.css" />
-	<link rel="stylesheet" type="text/css" href="css/resultsstyle.css" />
-	<link rel="stylesheet" type="text/css" href="css/responsivestyle.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/navstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/bodystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/resultsstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivestyle.css">
 	<title>Results</title>
 </head>
 <body>
@@ -52,12 +52,14 @@
 			    <div class="bar"></div>
 			    <div class="bar"></div>
 			</div>
-			<div class="logo">LOGO</div>
+			<div class="logo">
+				<a href="index.php"><img src="images/logo.png" alt="Pedal Plan"></a>
+			</div>
 			<ul id="nav-items">
 				<a href="index.php"><li>Home</li></a>
 				<a href="about.php"><li>About</li></a>
 			</ul>
-			<br class="clear" />
+			<br class="clear">
 		</div>
 	</div>
 	<div class="container">
