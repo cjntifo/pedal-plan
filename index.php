@@ -28,9 +28,7 @@ if ($autofill) {
 	<link rel="stylesheet" type="text/css" href="css/notiestyle.css" />
 	<!--<![endif]-->
 	<script type="text/javascript" src="js/errorcheckerscript.js"></script>
-	<!--[if IE]>
 	<script type="text/javascript" src="js/iescript.js"></script>
-	<![endif]-->
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -57,10 +55,14 @@ if ($autofill) {
 		<div class="input-container">
 			<form action="results.php" method="get" id='get-route'>
 				<div class='locations'>
-					<input type="text" name='start' placeholder="From..." <?php if ($autofill) {
+					<label for="start" id='start-placeholder'>From...</label>
+					<input type="text" name='start' id='start' placeholder='From...' <?php if ($autofill) {
 						echo('value="'.$start.'"');
 					} ?> />
-					<input type="text" name='end' placeholder="To..." <?php if ($autofill) {
+					<div class="arrow">&rarr;</div>
+					<div class="arrow-down">&darr;</div>
+					<label for="end" id='end-placeholder'>To...</label>
+					<input type="text" name='end' id='end' placeholder='To...' <?php if ($autofill) {
 						echo('value="'.$end.'"');
 					} ?> />
 				</div>

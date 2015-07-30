@@ -25,7 +25,7 @@ window.onload = function () {
 	if (typeof loadErrorCheckerScript == 'function') {
 		loadErrorCheckerScript();
 	}
-	if (typeof loadIEScript == 'function') {
-		loadIEScript();
+	if (typeof loadPlaceholderScript == 'function') {
+		loadPlaceholderScript();
 	}
 }

@@ -3,3 +3,26 @@
         width: 100%;
     }
 }
+@media all and (max-width: 470px) {
+	label[for=end], label[for=start] {
+		display: none;
+	}
+	.arrow {
+		display: none;
+	}
+	.arrow-down {
+		display: block;
+	}
+	::-webkit-input-placeholder {
+    color: #aaa;
+	}
+	::-moz-placeholder {
+	   color: #aaa;
+	}
+	:-ms-input-placeholder {
+	   color: #aaa;
+	}
+	#start {
+		margin-bottom: 10px;
+	}
+}
