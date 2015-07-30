@@ -45,7 +45,7 @@
 	<title>Results</title>
 </head>
 <body>
-	<div class="navbar">
+	<header>
 		<div class="nav-container">
 			<div id="bars">
 			    <div class="bar"></div>
@@ -61,24 +61,23 @@
 			</ul>
 			<br class="clear">
 		</div>
-	</div>
+	</header>
 	<div class="container">
+		<h2>Your safest route</h2>
+		
+		<p>It takes <?php echo $routes[0]["time"]; ?> to travel from <b><?php echo $routes[0]["start"][1]; ?></b> to <b><?php echo $routes[0]["end"][1]; ?></b> by bike.</p>
+		
 		<div id="map"></div>
-		<div class="directions">
-			<div class="title">
-				Directions
-			</div>
-			<div class="instructions">
-				<ol>
-				<?php
-					foreach ($routes[0]["instructions"] as $key=>$instruction) {
-						$type = ($key % 2 == 0) ? "even" : "odd";
-						
-						echo "<li class='$type'><p>$instruction<p></li>";
-					}
-				?>
-				</ol>
-			</div>
+		<div class="instructions">
+			<ol>
+			<?php
+				foreach ($routes[0]["instructions"] as $key=>$instruction) {
+					$type = ($key % 2 == 0) ? "even" : "odd";
+					
+					echo "<li class='$type'><p>$instruction<p></li>";
+				}
+			?>
+			</ol>
 		</div>
 	</div>
 </body>

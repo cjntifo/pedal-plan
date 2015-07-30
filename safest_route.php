@@ -66,7 +66,7 @@
 				array_push($rounded_lng, round($coord[1], 2));
 			}
 		
-			array_push($routes, array("instructions"=>$instructions, "coords"=>$coords, "polylines"=>$polylines, "start"=>[$route->legs[0]->start_location, $route->legs[0]->start_address], "end"=>[$route->legs[0]->end_location, $route->legs[0]->end_address]));
+			array_push($routes, array("instructions"=>$instructions, "coords"=>$coords, "polylines"=>$polylines, "start"=>[$route->legs[0]->start_location, $route->legs[0]->start_address], "end"=>[$route->legs[0]->end_location, $route->legs[0]->end_address], "time"=>$route->legs[0]->duration->text));
 		}
 	
 		$rounded_lat = array_unique($rounded_lat);

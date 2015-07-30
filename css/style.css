@@ -9,16 +9,18 @@
 	font-family: sans-serif;
 }
 *:focus {
-	outline: none;
+	outline: none !important;
 }
 .clear {
 	clear: both;
-}
-.title {
-	font-size: 35px;
+} 
+h1, h2 {
 	color: #333;
-	font-weight: bold;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	padding: 10px 0;
+	margin-bottom: 1em;
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	text-decoration: none;
 }

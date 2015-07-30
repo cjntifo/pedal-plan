@@ -18,7 +18,7 @@
 	<!--<![endif]-->
 </head>
 <body>
-	<div class="navbar">
+	<header>
 		<div class="nav-container">
 			<div id="bars">
 			    <div class="bar"></div>
@@ -34,7 +34,7 @@
 			</ul>
 			<br class="clear">
 		</div>
-	</div>
+	</header>
 	<div class="container">
 		<div class="desc">Enter your journey details and preferences to find the safest route by bike.</div>
 		<div id="error-msg"></div>
@@ -51,11 +51,11 @@
 				<div class="checkbox-container">
 					<div class='checkboxes'>
 						<p>
-							<input type="checkbox" name='congestion' id='congestion'>
+							<input type="checkbox" name='congestion' id='congestion' checked="checked">
 							<label for='congestion'>Avoid congestion</label>
 						</p>
 						<p>
-							<input type="checkbox" name='safest' id='safest'>
+							<input type="checkbox" name='safest' id='safest' checked="checked">
 							<label for='safest'>Pick the safest route</label>
 						</p>
 					</div>

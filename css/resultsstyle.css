@@ -26,3 +26,11 @@
 	display: table-cell;
 	padding: 10px;
 }
+
+#map {
+	height: 500px;
+	width: 100%;
+}
+.instructions {
+	margin-bottom: 20px;
+}
