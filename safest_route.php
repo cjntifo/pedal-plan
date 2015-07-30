@@ -55,7 +55,7 @@
 			foreach ($route->legs[0]->steps as $step) {
 				$polyline = $step->polyline->points;
 				$coords = array_merge($coords, getOddKeys(decodePolyline($polyline)));
-				array_push($polylines, $polyline);
+				array_push($polylines, addslashes($polyline));
 		
 				$instruction = strip_tags(str_replace("<div", ". <div", $step->html_instructions), "<b>") . ".";
 				array_push($instructions, $instruction);

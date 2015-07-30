@@ -7,12 +7,14 @@ function initialize() {
 		startMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(start_coords[0], start_coords[1]),
 			map: map,
-			title: start_address
+			title: start_address,
+			label: "A"
 		}),
 		endMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(end_coords[0], end_coords[1]),
 			map: map,
-			title: end_address
+			title: end_address,
+			label: "B"
 		});
 	
 	for (var i = 0; i < polylines.length; i++) {
@@ -21,7 +23,6 @@ function initialize() {
 			strokeColor: "#0000B3",
 			strokeOpacity: 0.5,
 			strokeWeight: 5,
-			geodisc: true,
 			map: map
 		});
 	}
