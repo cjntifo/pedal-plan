@@ -1,19 +1,11 @@
 <?php
-	require("safest_route.php");
-	
-	function getVar($getName, $default = false) {
+	function get($getName, $default = false) {
 		if (isset($_GET[$getName])) {
 			return $_GET[$getName];
 		}
 		return $default;
 	}
-	
-	$start = urlencode(getVar("start"));
-	$end = urlencode(getVar("end"));
-	$safe = getVar("safe") == "on" ? true : false;
-	$congestion = getVar("congestion") == "on" ? true : false;
-	
-	$routes = getSafestRoute($start, $end, $safe, $congestion);
+	require('key.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,15 +44,19 @@
 				Directions
 			</div>
 			<div class="instructions">
-				<ol>
+				<ul>
 				<?php
-					foreach ($routes[0]["instructions"] as $key=>$instruction) {
-						$type = ($key % 2 == 0) ? "even" : "odd";
-						
-						echo "<li class='$type'><p>$instruction<p></li>";
+					$array = array("Turn left", "Go straight on", "Turn right", "Go round the roundabout", "Get a satnav");
+					foreach ($array as $key => $value) {
+						$i = $key + 1;
+						if ($i % 2) {
+							echo("<li class='odd'><b>$i</b> $value</li>");
+						} else {
+							echo("<li class='even'><b>$i</b> $value</li>");
+						}
 					}
 				?>
-				</ol>
+				</ul>
 			</div>
 		</div>
 	</div>
