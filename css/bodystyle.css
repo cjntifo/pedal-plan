@@ -5,7 +5,7 @@ body {
 .container {
 	width: 700px;
 	margin: 0 auto;
-	padding: 10px 0;
+	padding-top: 35px;
 }
 .locations {
 	text-align: center;
@@ -70,7 +70,7 @@ button[type=submit]:hover {
 	text-align: justify;
 }
 p a {
-	color: #0000B3;
+	color: #10960c;
 }
 p a:hover {
 	border-bottom: 1px solid currentColor;

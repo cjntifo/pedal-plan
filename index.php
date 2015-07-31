@@ -20,16 +20,16 @@
 <body>
 	<header>
 		<div class="nav-container">
+			<div class="logo">
+				<a href="http://www.pedalplan.tk/"><img src="images/logo.png" alt="Pedal Plan"></a>
+			</div>
 			<div id="bars">
 			    <div class="bar"></div>
 			    <div class="bar"></div>
 			    <div class="bar"></div>
 			</div>
-			<div class="logo">
-				<a href="index.php"><img src="images/logo.png" alt="Pedal Plan"></a>
-			</div>
 			<ul id="nav-items">
-				<a href="index.php"><li>Home</li></a>
+				<a href="http://www.pedalplan.tk/"><li>Home</li></a>
 				<a href="about.php"><li>About</li></a>
 			</ul>
 			<br class="clear">

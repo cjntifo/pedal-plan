@@ -1,19 +1,18 @@
-.odd {
-	background: #eee;
-}
-.even {
-	background: #b7b7b7;
-}
 .instructions li {
 	color: #333;
 	list-style: none;
 	counter-increment: count;
 	display: table-row;
+	background: #fcfcfc; 
+}
+.instructions ol li b {
+	color: #10960c;
 }
 .instructions ol {
 	list-style-position: inside;
 	counter-reset: count;
 	display: table;
+	width: 100%;
 }
 
 .instructions li:before {
