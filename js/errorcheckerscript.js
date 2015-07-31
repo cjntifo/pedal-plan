@@ -15,7 +15,7 @@ function loadErrorCheckerScript() {
 		  	xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		for (var i = inputs.length - 1; i >= 0; i--) {
-			if (inputs[i].getAttribute('type') == 'text') {
+			if (inputs[i].getAttribute('type') === 'text') {
 				ajaxString += inputs[i].getAttribute('name') + '=' + inputs[i].value;
 			} else if (inputs[i].getAttribute('type') == 'checkbox') {
 				ajaxString += inputs[i].getAttribute('name') + '=';
@@ -30,9 +30,14 @@ function loadErrorCheckerScript() {
 		xmlhttp.onreadystatechange = function() {
 		  	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		    	result = xmlhttp.responseText;
-		    	result = result.split(' ');
+		    	result = result.split('+');
 		    	isCorrect = result[0] === 'true';
 		    	if (isCorrect) {
+		    		for (var i = inputs.length - 1; i >= 0; i--) {
+		    			if (inputs[i].getAttribute("type") === "text") {
+		    				inputs[i].value = (inputs[i].id === "start" ? result[1] : result[2]);
+		    			}
+		    		}
 		    		getRoute.className = 'success';
 		    		getRoute.submit();
 		    	} else {
