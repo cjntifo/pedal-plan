@@ -39,7 +39,7 @@
 			$new_arr = [];
 		
 			foreach ($array as $key=>$value) {
-				if ($key % 2 == 1) {
+				if ($key % 3 !== 0) {
 					array_push($new_arr, $value);
 				}
 			}
@@ -103,6 +103,7 @@
 		foreach ($routes as &$route) {
 			$accidents = [];
 			$points = 0;
+			
 			if ($safe) {
 				foreach ($query_results as $row) {
 					foreach ($route["coords"] as $coord) {

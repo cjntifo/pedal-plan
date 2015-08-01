@@ -10,7 +10,7 @@
 	
 	$start = urlencode(getVar("start"));
 	$end = urlencode(getVar("end"));
-	$safe = getVar("safe") == "on" ? true : false;
+	$safe = getVar("safest") == "on" ? true : false;
 	$congestion = getVar("congestion") == "on" ? true : false;
 	
 	$routes = getSafestRoute($start, $end, $safe, $congestion);
@@ -32,6 +32,10 @@
 			start_coords = [<?php echo $routes[0]["start"][0]->lat; ?>, <?php echo $routes[0]["start"][0]->lng; ?>],
 			end_address = "<?php echo $routes[0]["end"][1]; ?>",
 			end_coords = [<?php echo $routes[0]["end"][0]->lat; ?>, <?php echo $routes[0]["end"][0]->lng; ?>];
+		
+		<?php foreach ($routes as $route) {
+			echo "console.log('{$route['points']}');";
+		} ?>
 	</script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
 	<script type='text/javascript' src='js/mapscript.js'></script>
