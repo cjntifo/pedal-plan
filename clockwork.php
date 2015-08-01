@@ -28,5 +28,5 @@
 	
 	echo $message; 
 
-	var_dump($clockwork->send(array(array("to"=>$phone, "message"=>$message), array("to"=>$phone, "message"=>"(2 / 2) The rest of your journey and a map can be viewed at http://pedalplan.tk/results.php?start={$locations['start']}&end={$locations['end']}&congestion=on&safe=on."))));
+	var_dump($clockwork->send(array(array("to"=>$phone, "message"=>"(2 / 2) The rest of your journey and a map can be viewed at http://pedalplan.tk/results.php?start={$locations['start']}&end={$locations['end']}&congestion=on&safest=on."), array("to"=>$phone, "message"=>$message))));
 ?>

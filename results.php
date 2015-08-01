@@ -69,7 +69,7 @@
 		</div>
 	</header>
 	<div class="container">
-		<h2>Your safest route</h2>
+		<h2>Your <?php echo $safe ? "safest " : " "; ?>route <?php echo $congestion ? "with the least congestion" : ""; ?></h2>
 		
 		<p>It takes <?php echo $routes[0]["time"]; ?> to travel from <b><?php echo $routes[0]["start"][1]; ?></b> to <b><?php echo $routes[0]["end"][1]; ?></b> by bike.</p>
 		
