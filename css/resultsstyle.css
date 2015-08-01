@@ -33,3 +33,15 @@
 .instructions {
 	margin-bottom: 20px;
 }
+
+.safest {
+	background: #10960c;
+	color: white;
+	padding: 1em;
+	margin-bottom: 1em;
+	font-weight: bold;
+	border-radius: 3px;
+}
+.safest p {
+	margin-bottom: 0;
+}

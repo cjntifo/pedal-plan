@@ -8,12 +8,22 @@
 		return $default;
 	}
 	
+	function getStats($one, $two) {
+		$safer = ceil((100 / $one) * $two);
+		$fatalities = ceil(($two - $one) / 3);
+		return [$safer - 100, $fatalities];
+	}
+	
 	$start = urlencode(getVar("start"));
 	$end = urlencode(getVar("end"));
 	$safe = getVar("safest") == "on" ? true : false;
 	$congestion = getVar("congestion") == "on" ? true : false;
 	
 	$routes = getSafestRoute($start, $end, $safe, $congestion);
+	
+	$stats = getStats($routes[0]["points"], $routes[($routes[0]["points"] == $routes[1]["points"] && count($routes) > 2) ? 2 : 1]["points"]);
+	$safer = $stats[0];
+	$fatalities = $stats[1];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,14 +83,18 @@
 		
 		<p>It takes <?php echo $routes[0]["time"]; ?> to travel from <b><?php echo $routes[0]["start"][1]; ?></b> to <b><?php echo $routes[0]["end"][1]; ?></b> by bike.</p>
 		
+		<?php if ($safer > 0) { ?>
+			<div class="safest">
+				<p>This route is <?php echo $safer; ?>% safer than the next safest route. There were around <?php echo $fatalities; ?> fewer fatal accidents on this route.</p>
+			</div>
+		<?php } ?>
+		
 		<div id="map"></div>
 		<div class="instructions">
 			<ol>
 			<?php
-				foreach ($routes[0]["instructions"] as $key=>$instruction) {
-					$type = ($key % 2 == 0) ? "even" : "odd";
-					
-					echo "<li class='$type'><p>$instruction<p></li>";
+				foreach ($routes[0]["instructions"] as $instruction) {
+					echo "<li><p>$instruction<p></li>";
 				}
 			?>
 			</ol>
