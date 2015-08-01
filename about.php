@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="shortcut icon" href="images/logo.png">
+	
 	<title>About</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/navstyle.css">
@@ -38,5 +42,9 @@
 		<h2>Contact us</h2>
 		<p class="justify">To get in touch please <a href="mailto:alex@pedalplan.tk">email us</a> or tweet us at <a href="http://twitter.com/hitecherik">@hitecherik</a>, <a href="http://twitter.com/cjntifo">@cjntifo</a> or <a href="http://twitter.com/hive66">@hive66</a>.</p>
 	</div>
+	
+	<footer>
+		<p>Copyright &copy; Alexander Nielsen, Carl Ntifo and Ollie Cole 2015. Licenced under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Licence</a>.</p>
+	</footer>
 </body>
 </html>

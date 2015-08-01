@@ -21,6 +21,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	
+	<link rel="shortcut icon" href="images/logo.png">
+	
 	<script>
 		var polylines = [<?php 
 				foreach ($routes[0]["polylines"] as $key=>$polyline) {
@@ -84,5 +86,8 @@
 			</ol>
 		</div>
 	</div>
+	<footer>
+		<p>Copyright &copy; Alexander Nielsen, Carl Ntifo and Ollie Cole 2015. Licenced under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 Licence</a>.</p>
+	</footer>
 </body>
 </html>

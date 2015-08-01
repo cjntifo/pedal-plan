@@ -1,5 +1,5 @@
 @media all and (max-width: 740px) {
-    .nav-container, .container {
+    .nav-container, .container, footer p {
         width: 100%;
     }
     p {

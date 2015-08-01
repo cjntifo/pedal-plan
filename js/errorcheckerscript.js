@@ -2,6 +2,7 @@ function loadErrorCheckerScript() {
 	var getRoute = document.getElementById('get-route'),
 		inputs = document.getElementsByTagName('input'),
 		errorDialogue = document.getElementById('error-msg'),
+		submitButton = document.getElementsByTagName("button")[0],
 		timer;
 	getRoute.onsubmit = function () {
 		if(this.className == 'success') {
@@ -25,6 +26,7 @@ function loadErrorCheckerScript() {
 				ajaxString += '&';
 			}
 		}
+		submitButton.innerHTML = "Loading...";
 		xmlhttp.open("GET", ajaxString, true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange = function() {
@@ -41,6 +43,7 @@ function loadErrorCheckerScript() {
 		    		getRoute.className = 'success';
 		    		getRoute.submit();
 		    	} else {
+		    		submitButton.innerHTML = "Get Route";
 		    		if (result.length == 3) {
 		    			errorMsg = 'Both locations are invalid';
 		    		} else if (result[1] == '1') {

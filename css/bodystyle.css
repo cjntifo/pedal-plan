@@ -66,6 +66,15 @@ button[type=submit]:hover {
 	font-size: 25px;
 	color: #333;
 }
+.sms {
+	font-style: italic;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 1em;
+}
+.sms b {
+	color: #10960c;
+}
 .justify {
 	text-align: justify;
 }
@@ -115,4 +124,16 @@ label[for=end].active, label[for=start].active {
 }
 :-ms-input-placeholder {
    color: transparent;
+}
+
+footer {
+	font-size: 16px;
+	margin-top: 1em;
+	padding: 1em 0;
+	border-top: solid 1px #ccc;
+}
+
+footer p {
+	width: 700px;
+	margin: auto;
 }
