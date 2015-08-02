@@ -4,7 +4,9 @@
 	require("distance_calc.php");
 	
 	function getSafestRoute($start, $end, $safe, $congestion) {
-		$url = "https://maps.googleapis.com/maps/api/directions/json?origin=$start&destination=$end&key={$_GLOBALS['google']}&alternatives=true&mode=bicycling";
+		global $google, $bing;
+	
+		$url = "https://maps.googleapis.com/maps/api/directions/json?origin=$start&destination=$end&key={$google}&alternatives=true&mode=bicycling";
 		$db = new SQLite3("accidents.db");
 		$route_data = json_decode(file_get_contents($url));
 		$routes = [];
@@ -17,7 +19,7 @@
 		$light = (time() <= $weather_data->sys->sunrise || time() >= $weather_data->sys->sunset) ? "Darkness%" : "Daylight";
 		$rain = (strpos($weather_data->weather[0]->description, "rain") !== false) ? "Rain%" : "Fine%";
 	
-		$incidents_url = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/{$route_data->routes[0]->bounds->southwest->lat},{$route_data->routes[0]->bounds->southwest->lng},{$route_data->routes[0]->bounds->northeast->lat},{$route_data->routes[0]->bounds->northeast->lng}?key={$_GLOBALS['bing']}&s=3,4&t=1,2,3,4,8,9";
+		$incidents_url = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/{$route_data->routes[0]->bounds->southwest->lat},{$route_data->routes[0]->bounds->southwest->lng},{$route_data->routes[0]->bounds->northeast->lat},{$route_data->routes[0]->bounds->northeast->lng}?key={$bing}&s=3,4&t=1,2,3,4,8,9";
 		$incidents_data = json_decode(file_get_contents($incidents_url));
 		$incidents = [];
 	

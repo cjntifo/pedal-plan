@@ -85,7 +85,7 @@
 		
 		<?php if ($safer > 0) { ?>
 			<div class="safest">
-				<p>This route is <?php echo $safer; ?>% safer than the next safest route. There were around <?php echo $fatalities; ?> fewer fatal accidents on this route.</p>
+				<p>This route is <?php echo $safer; ?>% safer than alternative routes. That means about <?php echo $fatalities; ?> fewer fatal historic accidents on this route.</p>
 			</div>
 		<?php } ?>
 		
